@@ -1,12 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Tasks</h1>
-<div id="tasks">
-  <ul>
-    <%= render @user_tasks %>
-  </ul>
-</div>
+<div class="row">
 
-<%= link_to 'New User task', new_user_task_path, remote: true, class: "btn btn-success" %>
+  <!-- Task form -->
+  <div class="col-sm-3">
+    <%= link_to 'New User task', new_user_task_path, remote: true, class: "btn btn-success" %>
+    <div id="task-form"></div>
+  </div>
 
-<div id="task-form"></div>
+  <!-- Task list -->
+  <div class="col-sm-9">
+    <div id="tasks">
+      <ul>
+        <%= render @user_tasks %>
+      </ul>
+    </div>
+  </div>
+
+</div> <!-- row -->
+
+
+
