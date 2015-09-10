@@ -11,3 +11,7 @@ body {
 div#task-form {
   display: none;
 }
+
+.task a[data-method="delete"]:hover {
+  text-decoration: line-through;
+}
