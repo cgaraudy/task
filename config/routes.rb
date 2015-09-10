@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'pages#home'
+  # See gem documentation https://github.com/mkdynamic/omniauth-facebook#client-side-flow-with-facebook-javascript-sdk
+  get '/auth/:provider/callback' => "sessions#create"
+  get '/signout' => "sessions#destroy", :as => :signout
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
