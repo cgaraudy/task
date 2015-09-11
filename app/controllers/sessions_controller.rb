@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+  def new
+  end
+
   def create
     # see gem documentation - this is how we request the hash https://github.com/mkdynamic/omniauth-facebook#auth-hash
     auth = request.env["omniauth.auth"]
