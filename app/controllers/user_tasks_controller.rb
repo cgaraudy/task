@@ -95,6 +95,6 @@ class UserTasksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_task_params
-      params.require(:user_task).permit(:description, :due)
+      params.require(:user_task).permit(:description, :due,)
     end
 end
